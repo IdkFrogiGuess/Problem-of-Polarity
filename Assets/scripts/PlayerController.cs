@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
+
+    private
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,5 +29,9 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = Vector2.up * jumpForce;
         }
+        if (Input.GetKey(KeyCode.Space)){
+            rb.linearVelocity = Vector2.up * jumpForce;
+
+        }
     }
-} 
+}
